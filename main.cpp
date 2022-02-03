@@ -1,14 +1,31 @@
 #include <iostream>
-#include "GradeBook.hpp"
+#import "FunctionsClass.hpp"
 
 using namespace std;
 
-int main() {
-    GradeBook myGradeBook("CS101 C++ Programming");
-    
-    myGradeBook.displayMessage();
-    myGradeBook.determineClassAverage();
-	cout << "Largest number from 1, 2, and 3 is: " << myGradeBook.maximum(1, 2, 3) << endl;;
-    
-    return 0;
+int main() 
+{	
+	FunctionsClass functions;
+	
+	int number = 0, exponent;
+	
+	cout << "ASKISI 1\n";
+	cout << "Enter number to find factorial: ";
+	cin >> number;
+	cout << number << "! = " << functions.factorial(number) << endl;
+	
+	cout << endl;
+	
+	cout << "ASKISI 2\n";
+	cout << "e = " << functions.findE(0, 0) << endl;
+	
+	cout << endl;
+	
+	cout << "ASKISI 3\n";
+	cout << "Enter exponent: ";
+	cin >> exponent;
+	cout << "e^" << exponent << " = " << functions.findE(exponent, 1) << endl;
+	
+	
+	return 0;
 }
